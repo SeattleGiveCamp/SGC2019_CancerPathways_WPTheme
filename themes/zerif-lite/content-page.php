@@ -10,9 +10,6 @@
 
 	<header class="entry-header">
 
-		<span class="date updated published"><?php the_time( get_option( 'date_format' ) ); ?></span>
-		<span class="vcard author byline"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" class="fn"><?php the_author(); ?></a></span>
-
 		<?php zerif_page_header_trigger(); ?>
 
 	</header><!-- .entry-header -->
