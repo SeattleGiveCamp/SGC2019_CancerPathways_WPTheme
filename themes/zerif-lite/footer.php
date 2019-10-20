@@ -181,7 +181,9 @@
 			
 		endif;
 	?>
-   
+
+   	 <?php wp_enqueue_script( 'script', get_template_directory_uri() . '/js/2019_givecamp.js', array ( ), 1.0, true); ?>
+
 
 </div> <!-- / END CONTAINER -->
 
