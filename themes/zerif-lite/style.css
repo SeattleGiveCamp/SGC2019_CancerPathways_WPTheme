@@ -12130,7 +12130,7 @@ background-size: cover;
 
 		border-radius: 3px;
 
-		background: url(images/menu-icon.png) center center no-repeat #9CC4C6;
+		background: url('images/menu-icon.png') center center no-repeat #9CC4C6;
 
 	}
 

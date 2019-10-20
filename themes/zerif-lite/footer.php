@@ -11,7 +11,7 @@
 <footer id="footer" role="contentinfo">
 
 <div class="container">
- <div class="'.$footer_class.' copyright">
+ <div class="<?php echo $footer_class; ?> copyright">
     <div class="socialmediadiv" style="min-width: 250px !important; text-align: center; margin-top: -40px;">
 
 
