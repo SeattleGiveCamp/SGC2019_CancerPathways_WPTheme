@@ -16,12 +16,17 @@ if (
   hideTagCloud();
 }
 
+// in the essay tag pages, hides unnecessary tags
+if (document.querySelector('#categorized-tag-cloud')) {
+	hideUnnecessaryTagsInCloud();
+}
+
 // ==================================================================
 
 function limitCategoryDropdown() {
   let options = [
     ...document.querySelector(".page-id-12232 #ofcategory").children
-  ];
+  ].splice(1);
   let start = options.findIndex(option => option.value === "29");
   let remaining = options.splice(start + 1);
   let end = remaining.findIndex(option => option.className === "level-0");
@@ -29,6 +34,13 @@ function limitCategoryDropdown() {
 
   options.forEach(option => (option.hidden = true));
   last.forEach(option => (option.hidden = true));
+  
+  remaining.forEach(option => { 
+  	if (option.label.includes('2')) {
+   		option.hidden = true;
+  	}
+  })
+
 }
 
 function limitTagDropdown() {
@@ -48,4 +60,14 @@ function hideTagCloud() {
   if (isNotEssayPage && node) {
     node.hidden = true;
   }
+}
+
+function hideUnnecessaryTagsInCloud() {
+	let children = [...document.querySelector('#categorized-tag-cloud').children];
+	console.log(children)
+	children.forEach(tag => {
+		if (tag.innerText[0] === '.') {
+			tag.hidden = true;
+		}
+	})
 }
