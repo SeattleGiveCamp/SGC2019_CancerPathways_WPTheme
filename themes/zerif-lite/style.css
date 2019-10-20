@@ -3504,13 +3504,13 @@ margin-bottom: 10px;
 
 .menu-align-center #site-navigation {
 
-	wordth: 100%;
+	width: 100%;
 
 }
 
 .menu-align-center #site-navigation > ul {
 
-	wordth: 100%;
+	width: 100%;
 
 	text-align: center;
 
